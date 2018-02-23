@@ -1,0 +1,31 @@
+---
+title: "Famous mountains of Córdoba, Argentina"
+author: "Matías A. Alfonso"
+date: "23 de febrero de 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r leaflet, echo = FALSE}
+library(leaflet)
+mounts <- data.frame(
+          lat = c(-31.4197, -31.9882, -30.8460),
+          lng = c(-64.8056, -64.9368, -64.4768))
+
+mountsNames <- c(
+    "<a> Cerro Los Gigantes </a>",
+    "<a> Cerro Champaquí </a>",
+    "<a> Cerro Uritorco </a>"
+)
+
+my_map <-
+    mounts %>% 
+    leaflet() %>%
+    addTiles() %>% 
+    addMarkers(popup = mountsNames)
+    
+my_map
+```
