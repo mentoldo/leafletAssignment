@@ -1,7 +1,7 @@
 ---
 title: "Famous mountains of Córdoba, Argentina"
 author: "Matías A. Alfonso"
-date: "23 de febrero de 2018"
+date: "February 23, 2018"
 output: html_document
 ---
 
